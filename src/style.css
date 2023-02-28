@@ -1,0 +1,42 @@
+:root {
+  --primary: #0d2438;
+  --secondary: #102d44;
+  --ternary: #1e3851;
+  --teal: #2dd4bf;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  background-color: var(--primary);
+  color: white;
+  font-family: Nunito;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("./assets/Nunito-Regular.ttf") format("truetype");
+}
+
+.front,
+.back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.front {
+  background-color: var(--ternary);
+}
+
+.back {
+  background-color: var(--secondary);
+}
