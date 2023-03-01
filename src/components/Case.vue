@@ -3,7 +3,7 @@ import { computed } from 'vue';
 import { useGameStore } from '../store';
 import { VueFlip } from 'vue-flip'
 
-const { playTurn, isVisible } = useGameStore()
+const { playTurn, isVisible, canFlip } = useGameStore()
 
 const props = defineProps<{
     caseNumber: number,
@@ -13,7 +13,7 @@ const props = defineProps<{
 const visible = computed(() => isVisible(props.index));
 
 function play() {
-    playTurn(props.caseNumber, props.index)
+    if (canFlip == true) { playTurn(props.caseNumber, props.index) }
 }
 
 
